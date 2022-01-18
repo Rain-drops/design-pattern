@@ -4,11 +4,11 @@ public class AppMain {
 
     public static void main(String[] args) {
         TaskDelegate taskLookup = new TaskDelegate();
-        taskLookup.setType("Tea");
 
-        new Client(taskLookup).doTask("Coffee");
+        // 我跟饭店经理说我要咖啡
+        new Client().doSomething("Coffee", taskLookup);
 
-        new Client(taskLookup).doTask();
+        new Client().doSomething("Tea", taskLookup);
     }
 
 }
