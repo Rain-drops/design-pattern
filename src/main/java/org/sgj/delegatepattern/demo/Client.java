@@ -1,9 +1,17 @@
 package org.sgj.delegatepattern.demo;
 
 public class Client {
-    public static void main(String[] args) {
-        Boss boss = new Boss();
-        boss.doingWork("Coffee");
-        boss.doingWork("Tea");
+    private TaskDelegate delegate;
+
+    public Client(TaskDelegate delegate) {
+        this.delegate = delegate;
+    }
+
+    public void doTask(){
+        delegate.doTask();
+    }
+
+    public void doTask(String cmd){
+        delegate.doTask(cmd);
     }
 }

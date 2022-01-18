@@ -3,16 +3,26 @@ package org.sgj.delegatepattern.demo;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TaskDelegate{
+public class TaskDelegate {
 
-    public Map<String,ITaskDelegate> taskMap = new HashMap<String,ITaskDelegate>();
+    public Map<String, ITask> lookup = new HashMap<String, ITask>();
+
+    private String type;
 
     public TaskDelegate() {
-        taskMap.put("Coffee",new ConcreteTaskA());
-        taskMap.put("Tea",new ConcreteTaskB());
+        lookup.put("Coffee",new ConcreteTaskA());
+        lookup.put("Tea",new ConcreteTaskB());
     }
 
-    public void doSomething(String cmd) {
-        taskMap.get(cmd).doSomething(cmd);
+    public void setType(String cmd){
+        this.type = cmd;
+    }
+
+    public void doTask() {
+        lookup.get(type).doSomething();
+    }
+
+    public void doTask(String cmd) {
+        lookup.get(cmd).doSomething();
     }
 }

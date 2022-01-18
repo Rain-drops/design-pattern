@@ -1,8 +1,8 @@
 package org.sgj.delegatepattern.demo;
 
-public class ConcreteTaskB implements ITaskDelegate{
+public class ConcreteTaskB implements ITask {
     @Override
-    public void doSomething(String id) {
+    public void doSomething() {
         System.out.println(" B 去 冲茶");
     }
 }
