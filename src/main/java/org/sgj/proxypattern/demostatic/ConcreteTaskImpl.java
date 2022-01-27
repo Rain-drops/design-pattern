@@ -1,6 +1,6 @@
-package org.sgj.proxypattern.demo;
+package org.sgj.proxypattern.demostatic;
 
-public class TaskImpl implements ITask{
+public class ConcreteTaskImpl implements ITask{
 
     @Override
     public void doSomething(String cmd) {

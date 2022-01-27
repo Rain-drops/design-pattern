@@ -1,9 +1,9 @@
-package org.sgj.proxypattern.demo;
+package org.sgj.proxypattern.demostatic;
 
 public class TaskStaticProxy implements ITask{
 
-    private TaskImpl taskImpl;
-    public TaskStaticProxy(TaskImpl taskImpl) {
+    private ConcreteTaskImpl taskImpl;
+    public TaskStaticProxy(ConcreteTaskImpl taskImpl) {
         this.taskImpl = taskImpl;
     }
 
