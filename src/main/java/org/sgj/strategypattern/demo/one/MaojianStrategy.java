@@ -1,4 +1,4 @@
-package org.sgj.strategypattern.demo;
+package org.sgj.strategypattern.demo.one;
 
 public class MaojianStrategy implements IStrategy{
 

@@ -1,4 +1,4 @@
-package org.sgj.strategypattern.demo;
+package org.sgj.strategypattern.demo.one;
 
 import java.util.HashMap;
 import java.util.Map;
